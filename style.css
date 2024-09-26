@@ -1,0 +1,169 @@
+/* Fonts */
+/* overpass-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/overpass-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* overpass-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/overpass-v13-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-Grey: hsl(217, 12%, 63%);
+    --dark-Blue: hsl(216, 24%, 12%);
+    --VeryDarkBlue: hsl(228, 12%, 9%);
+    --orange: hsl(25, 97%, 53%);
+}
+
+body {
+    font-family: "Overpass", sans-serif;
+    max-height: 100vh;
+    max-width: 100%;    
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--VeryDarkBlue);
+    
+}
+
+.container{
+    background-color: var(--dark-Blue);
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 1.5rem;
+    width: 21.975rem;
+    height: 21.975rem;
+    border-radius: 7%;
+}
+
+.icon img {
+    display: block;    
+    border-radius: 50%;
+    padding: .75rem;  
+}
+
+.main-h1 {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: .057rem;
+    padding-top: 1.5rem;
+}
+
+.main-text {
+    color: var(--light-Grey);
+    font-weight: 300;
+    font-size: 0.8375rem;
+    padding-top: .75rem;
+    line-height: 1.25rem;
+}
+
+.button-list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
+}
+
+.rate-button {
+    border-radius: 50%;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: var(--light-Grey);
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.rate-button:hover {
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--VeryDarkBlue);
+}
+
+.submit-button {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    text-decoration: none;
+    border-style: none;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: var(--orange);
+    color: var(--VeryDarkBlue);
+    box-shadow: 0px 2px 5px var(--VeryDarkBlue);
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    background-color: var(--white);
+}
+
+/* thank you elements */
+
+.thank-you {
+    align-items: center;
+    justify-items: center;
+}
+
+.ty-img {
+    width: 45%;
+    min-height: auto;
+    align-self: center;
+    padding: 1.5rem 0;
+}
+
+.rate-selection {
+    font-family: "overpass", sans-serif;
+    font-weight: 400;
+    font-size: 0.8375rem;
+    word-spacing: .05rem;
+    border-radius: 25px;
+    padding: 3px 15px;
+    color: var(--orange);        
+}
+
+.ty-paragraph {
+    color: var(--light-Grey);
+    font-weight: 300;
+    font-size: 0.8375rem;
+    padding-top: .75rem;
+    line-height: 1.25rem;
+    text-align: center;
+    padding: 1.15rem .1rem 0;
+}
+
+
+/* Utilities and Interactions with buttons Js */
+
+.pressed {
+    background-color: var(--white);
+    color: var(--dark-Blue);    
+}
+
+.hide{
+    display: none;
+}
+
+.grey {
+    background-color: hsla(217, 12%, 63%, .1);
+}
